@@ -31,13 +31,13 @@ artists_csv = pd.read_csv(fileName, index_col=None)
 # In[ ]:
 
 for i in bar(range(0, len(artists_csv))):
-    currArtist = str(artists_csv.iloc[i]['artist_name'])
+    currArtist = str(artists_csv.iloc[i][col_to_be_modified])
     #Split the str on pattern
     group0 = re.search(pattern, currArtist)
     if (group0 != None):
         newArtist = group0.group(0).replace('(', '').replace(')', '')
-        artists_csv.set_value(i, 'processed_artists', newArtist)
-print 'Finito
+        artists_csv.set_value(i, col_to_be_modified, newArtist)
+print 'Finito'
 
 
 # In[ ]:
