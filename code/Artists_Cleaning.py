@@ -20,6 +20,7 @@ fileName = 'artists_copy_new.csv'
 outputFileName = 'artists_copy_new.csv'
 col_to_be_modified = 'artist_name'
 
+pattern = '\([a-zA-Z0-9\s]+\)'
 
 # In[5]:
 
