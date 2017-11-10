@@ -82,7 +82,7 @@ for i in bar(range(0,len(artists))):
         artists.set_value(i, 'translated_names', text)
     else:
     #Copy the reduced name, i.e. bracket removed name
-    artists.set_value(i, 'translated_names', currName)  
+        artists.set_value(i, 'translated_names', currName)  
 print 'Translation finished'
 
 
