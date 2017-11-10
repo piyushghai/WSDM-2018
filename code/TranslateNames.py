@@ -27,7 +27,7 @@ import progressbar
 # In[4]:
 
 fileName = 'artists_copy_new.csv'
-outputFileName = 'artists_copy_new.csv'
+outputFileName = 'tr_artists_copy_new.csv'
 col_to_be_modified = 'artist_name'
 pattern = '\s\(.+\)'
 
@@ -70,6 +70,7 @@ for i in bar(range(0,len(artists))):
     currName = str(artists.iloc[i][col_to_be_modified])
     # Check if current name contains brackets. If it does, drop the parts in brackets...
     currName = re.sub(pattern, '', currName)
+    #print currName
     lang, pred = identifier.classify(currName)  # Using LangId
     #     print lang, pred, artists.iloc[i]['artist_name'], i
     if (lang != 'en'):
@@ -79,6 +80,9 @@ for i in bar(range(0,len(artists))):
             text = translate_sent(currName, i, dest='en')
         print text, i
         artists.set_value(i, 'translated_names', text)
+    else:
+    #Copy the reduced name, i.e. bracket removed name
+    artists.set_value(i, 'translated_names', currName)  
 print 'Translation finished'
 
 
@@ -94,6 +98,5 @@ write_to_csv(artists)
 
 
 # In[ ]:
-
 
 
