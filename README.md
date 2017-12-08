@@ -9,6 +9,6 @@ Our presentation can be found [here](https://docs.google.com/presentation/d/1Wwj
 ### Team :
  - [Sangeeta Kumari](https://github.com/ksangeeta2429)
  - [Pravar Mahajan](https://github.com/pravarmahajan)
- - [Piyush] (https://github.com/piyushghai)
+ - [Piyush](https://github.com/piyushghai)
 
 
